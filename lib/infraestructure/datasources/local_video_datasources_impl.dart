@@ -3,7 +3,7 @@ import 'package:scroll_videos_app/domain/entities/video_post.dart';
 import 'package:scroll_videos_app/infraestructure/models/local_videos_models.dart';
 import 'package:scroll_videos_app/shared/local_videos.dart';
 
-abstract class LocalVideoDatasourcesImpl implements VideoPostDataSource {
+ class LocalVideoDatasourcesImpl implements VideoPostDataSource {
 
   @override
   Future<List<VideoPost>> getFavoriteVideosByUser(String userId){

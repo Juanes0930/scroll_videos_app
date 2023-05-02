@@ -1,4 +1,5 @@
  import 'package:flutter/material.dart';
+import 'package:scroll_videos_app/config/helpers/format_data.dart';
 
 class CustomButtons extends StatelessWidget {
    final int value;
@@ -11,7 +12,6 @@ class CustomButtons extends StatelessWidget {
     required this.icon, 
     iconColor}):color = iconColor ?? Colors.white;
     
- 
    @override
    Widget build(BuildContext context) {
      return Column(
@@ -19,7 +19,7 @@ class CustomButtons extends StatelessWidget {
         IconButton(onPressed: (){}, 
         icon: Icon(icon , color:color , size : 30)),
         if(value > 0)
-        Text('Hola')
+        Text(FormatData.readbleNumber(value.toDouble()))
       ],
      );
    }
