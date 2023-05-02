@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:scroll_videos_app/config/theme/app_theme.dart';
 import 'package:scroll_videos_app/presentation/provider/discover_provider.dart';
 import 'package:scroll_videos_app/presentation/screens/discover/discover_screen.dart';
 
@@ -17,9 +18,11 @@ class MyApp extends StatelessWidget {
          create: (_) => DiscoverProvider()..loadNextPage(),
       )
     ],
-    child :const MaterialApp(
+    child :MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'ScrollVideos App',
-      home: DiscoverScreen()
+      theme: AppTheme().themeData(),
+      home: const DiscoverScreen()
     ));
   }
 }
